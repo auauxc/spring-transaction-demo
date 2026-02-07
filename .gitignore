@@ -1,0 +1,22 @@
+# IDEA 配置文件
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven 编译输出目录
+target/
+build/
+
+# 日志文件
+*.log
+logs/
+
+# 数据库配置/敏感信息（可选，本地配置不上传）
+application-dev.yml
+db.properties
+
+# 系统缓存文件
+.DS_Store
+*.tmp
+*.swp

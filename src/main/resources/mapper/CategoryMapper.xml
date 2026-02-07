@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须和Mapper接口全类名完全一致 -->
+<mapper namespace="com.svtu.mapper.CategoryMapper">
+    <!-- 1. id和Mapper接口方法名保持一致（这里用insert，和测试逻辑匹配） -->
+    <!-- 2. parameterType用别名（因mybatisConfig.xml配置了POJO扫描，直接写Category） -->
+    <!-- 3. 参数绑定直接写#{name}，无需加category.前缀 -->
+    <!-- 4. 表名t_category，确保数据库中表名也是t_category（统一命名） -->
+    <insert id="insert" parameterType="Category">
+        INSERT INTO t_category (name) VALUES (#{name})
+    </insert>
+</mapper>
